@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { TypingText } from '../components';
-
+import { Link } from 'react-scroll';
 import styles from '../styles';
 import { fadeIn, staggerContainer } from '../utils/motion';
 
@@ -30,14 +30,15 @@ const About = () => (
         <span className='font-extrabold text-white'>explore</span> the madness
         of the metaverse by scrolling down
       </motion.p>
-      <motion.img
-        variants={fadeIn('up', 'tween', 0.3, 1)}
-        src='/arrow-down.svg'
-        alt='arrow down'
-        className='w-[18px] h-[28px] object-contain mt-[28px]'
-      />
+      <Link to='explore' duration={1.2} smooth={true} spy={true}>
+        <motion.img
+          variants={fadeIn('up', 'tween', 0.3, 1)}
+          src='/arrow-down.svg'
+          alt='arrow down'
+          className='w-[18px] h-[28px] object-contain mt-[28px] cursor-pointer'
+        />
+      </Link>
     </motion.div>
-    About section
   </section>
 );
 export default About;

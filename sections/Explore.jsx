@@ -9,7 +9,8 @@ import styles from '../styles';
 
 import { exploreWorlds } from '../constants';
 
-const Explore = () => {
+const Explore = () =>
+{
   const [active, setActive] = useState('world-2');
 
   return (
